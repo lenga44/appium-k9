@@ -13,11 +13,11 @@ public class Lab_2_3 {
         myWeight = scanner.nextFloat();
         BMI = myWeight / (myHeight * 2);
         System.out.printf(" Your BMI : %.1f", BMI);
-        if (BMI < 18.5 && BMI <= 24.9) {
+        if (BMI <= 24.9) {
             if (BMI < 18.5) {
                 System.out.println(" - Underweight");
                 System.out.print(" => You should increase weight ");
-            } else {
+            } else if (BMI <= 24.9){
                 System.out.println(" - Normal weight");
                 System.out.print(" => You are fit!!!!! ");
             }
