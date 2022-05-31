@@ -5,7 +5,10 @@ import java.util.*;
 public class Lab_4 {
 
     public static void main(String[] args) {
-        List<Integer> myArrayList =  new ArrayList<>(Arrays.asList(5,6,3,7,3));
+        List<Integer> myArrayList =  new ArrayList<>();
+        myArrayList.add(5);
+        myArrayList.add(6);
+        myArrayList.add(3);
 
         printSimpleMenu();
         boolean isContinuing = true;
