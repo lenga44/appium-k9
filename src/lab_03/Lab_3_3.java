@@ -1,24 +1,45 @@
 package lab_03;
 
+import java.util.Arrays;
+
 public class Lab_3_3 {
 
     public static void main(String[] args) {
 
-        int[] intArr = {12,34,1,16,28};
+        int[] intArr = {12, 34, 1, 16, 28};
 
-        for (int i = 0; i < intArr.length; i++) {
-            for (int j = i+ 1; j < intArr.length; j++) {
-                if (intArr[i] > intArr[j]) {
-                    int temp = intArr[i];
-                    intArr[i] = intArr[j];
-                    intArr[j] = temp;
+        System.out.println("Sort an integer array from min to max: ");
+        System.out.println(Arrays.toString(sortArray(intArr)));
+
+    }
+
+    public static int[] sortArray(int[] intArr) {
+        int arrLength = intArr.length;
+
+        for (int unsortesIndex = arrLength - 1; unsortesIndex > 0; unsortesIndex--) {
+            for (int index = 0; index < unsortesIndex; index++) {
+                if (intArr[index] > intArr[index + 1]) {
+                    int tmp = intArr[index];
+                    intArr[index] = intArr[index + 1];
+                    intArr[index + 1] = tmp;
                 }
             }
         }
-            System.out.println("Sort an integer array from min to max: ");
-            for (int value : intArr) {
-                System.out.print(value + "\t");
-            }
-
+        return intArr;
     }
+
+//    public static int[] sortArray(int[] intArr) {
+//        int arrLength = intArr.length;
+//
+//        for (int unsortesIndex = arrLength - 1; unsortesIndex > 0; unsortesIndex--) {
+//            for (int index = 0; index < unsortesIndex; index++) {
+//                if (intArr[index] > intArr[index + 1]) {
+//                    intArr[index] = intArr[index] + intArr[index + 1];
+//                    intArr[index + 1] = intArr[index] - intArr[index + 1];
+//                    intArr[index] = intArr[index] - intArr[index + 1];
+//                }
+//            }
+//        }
+//        return intArr;
+//    }
 }

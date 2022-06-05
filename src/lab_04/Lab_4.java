@@ -6,8 +6,8 @@ public class Lab_4 {
 
     public static void main(String[] args) {
         List<Integer> myArrayList =  new ArrayList<>();
+        myArrayList.add(3);
         myArrayList.add(5);
-        myArrayList.add(6);
         myArrayList.add(3);
 
         printSimpleMenu();
@@ -59,10 +59,7 @@ public class Lab_4 {
     }
 
     private static void printNumbers(List<Integer> myArrayList) {
-        for (Object element : myArrayList) {
-            System.out.print(element + "\t");
-        }
-        System.out.print("\n");
+        System.out.println(myArrayList.toString());
     }
 
     private static void getMaxNumber(List<Integer> myArrayList) {
@@ -91,9 +88,9 @@ public class Lab_4 {
         int number = scanner.nextInt();
         if (myArrayList.contains(number) == true){
             System.out.println("Index of number  : ");
-            for (int index = 1; index <= myArrayList.size(); index++) {
-                if (myArrayList.get(index-1) == number){
-                    System.out.print(index + "\t");
+            for (int index = 0; index < myArrayList.size(); index++) {
+                if (myArrayList.get(index) == number){
+                    System.out.print( "\t" + (index+1));
                 }
             }
             System.out.print("\n");
