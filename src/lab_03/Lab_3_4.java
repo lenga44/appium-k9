@@ -34,7 +34,7 @@ public class Lab_3_4 {
             intArrMerge[intArrMergeIndex++] = intArr2[intArr2Index++];
         }
 
-        return intArrMerge;
+        return intArrMerge ;
     }
 
 }

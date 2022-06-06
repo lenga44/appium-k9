@@ -59,7 +59,7 @@ public class Lab_4 {
     }
 
     private static void printNumbers(List<Integer> myArrayList) {
-        System.out.println(myArrayList.toString());
+        System.out.println(myArrayList);
     }
 
     private static void getMaxNumber(List<Integer> myArrayList) {
