@@ -10,9 +10,9 @@ public class Lab_4 {
         myArrayList.add(5);
         myArrayList.add(3);
 
-        printSimpleMenu();
         boolean isContinuing = true;
         while (isContinuing){
+            printSimpleMenu();
             int option = generateOptipon();
             switch (option){
                 case 1:
@@ -75,7 +75,7 @@ public class Lab_4 {
     private static void getMinNumber(List<Integer> myArrayList) {
             int min = myArrayList.get(0);
             for (int element : myArrayList) {
-                if (element < min || element == min) {
+                if (element < min ) {
                     min = element;
                 }
             }
