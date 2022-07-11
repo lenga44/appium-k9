@@ -10,8 +10,7 @@ public class ContestController {
         Animal tiger = new Tiger();
         Animal dog = new Dog();
 
-        ContestController contestController = new ContestController();
-        contestController.getWinner(Arrays.asList(horse,tiger,dog));
+        getWinner(Arrays.asList(horse,tiger,dog));
     }
 
     public static void getWinner(List<Animal> animalList){
